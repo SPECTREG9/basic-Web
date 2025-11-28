@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ทอดสอบ Event</title>
+    <style>
+        input {
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            font-size: 20px;
+
+        }
+
+        select {
+            font-size: 25px;
+            padding: 15px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> ทดสอบ input</h2>
+    <input id="msg-input" placeholder="กรุณาใส่ข้อความ" type="date">
+    <p id="show-msg">ข้อความที่อ่านได้: </p>
+   
+    <h2>ทดสอบการเลือกแบบselect</h2>
+    
+    <p id="show-select-msg">ข้อความที่อ่านได้: </p>
+    <select id="selec-input">
+        <option>โปรดเลือกตัวเลือก</option>
+        <option>ตัวเลือกที่1</option>
+        <option>ตัวเลือกที่2</option>
+        <option>ตัวเลือกที่3</option>
+        <option>ตัวเลือกที่4</option>
+        <option>ตัวเลือกที่5</option>
+    </select>
+    <script>
+        const msgInputElement = document.getElementById('msg-input')
+        msgInputElement.addEventListener("input", function () {
+            const msg = this.value
+            const showMsgElement = document.getElementById('show-msg')
+            showMsgElement.innerText = 'ข้อความที่อ่านได้: ' + msg
+        })
+         const msgSelectElement = document.getElementById('selec-input')
+        msgSelectElement.addEventListener("input", function () {
+            const msg = this.value
+            const showMsgElement = document.getElementById('show-select-msg')
+            showMsgElement.innerText = 'ข้อความที่อ่านได้: ' + msg
+        })
+
+
+
+    </script>
+</body>
+
+</html>
