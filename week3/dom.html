@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>เรียน Advance DOM</title>
+        <link rel="stylesheet" href="./style.css">
+         <style>
+        body {
+            background-color: rgb(30, 146, 255);
+            font-family: "Google Sans", sans-serif;
+            margin: 0;
+        }
+
+        .header-texe {
+            text-align: center;
+            color: white;
+        }
+
+        .header-container {
+            margin-top: 5%;
+            background: linear-gradient(45deg, rgb(180, 245, 255), rgb(130, 230, 255));
+            padding: 20px;
+            border-radius: 15px;
+            width: 70%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .img-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+
+        .nav-menu-contai {
+            display: flex;
+            justify-content: center;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-menu-item {
+
+            margin: 0 20px;
+            font-size: 18px;
+            color: rgb(20, 20, 20);
+            text-decoration: none;
+            cursor: pointer;
+            padding: 8px 14px;
+            border-radius: 5px;
+            transition: 0.25s;
+            font-weight: 600;
+        }
+
+
+        .nav-menu-item:hover {
+            background-color: rgb(37, 230, 255);
+            color: white;
+        }
+    </style>
+    </head>
+    <body>
+<div class="nav-menu-contai">
+        <a class="nav-menu-item" href="index.html">หน้าแรก</a>
+        <a class="nav-menu-item" href="https://www.facebook.com/">Facebook ของฉัน</a>
+        <a class="nav-menu-item" href="../week2/WEEK2/index.html">บทเรียนสัปดาห์ที่2</a>
+        <a class="nav-menu-item" href="./week3/dom.html">บทเรียนเรื่องDOMและPOM</a>
+    </div>
+    <div class="flex-header">
+<h2>เรียนเรื่อง  Get Element By Tag Name</h2>
+    </div>
+    <script>
+    const aTags = document.getElementsByTagName('a')
+    console.log(aTags.item())
+
+    const navMenuClassItem = document.getElementsByClassName('nav-menu-item')
+    console.log(navMenuClassItem[1].innerText = 'เปลี่ยนข้อความ')
+</script>
+    </body>
+</html>
