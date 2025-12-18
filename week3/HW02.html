@@ -19,29 +19,23 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
-    <!--
-<script type="text/javascript" src="./jquery.min.js"></script>
-<script type="text/javascript" src="./bootstrap.min.js"></script>
-<link rel="stylesheet" href="./bootstrap.min.css" >
-<link rel="stylesheet" href="./font-awesome.min.css">
--->
 
 
   <style type="text/css">
-        /* --- 1. ICE THEME VARIABLES --- */
+   
         :root {
-            --ice-primary: #2980b9;      /* Strong Blue */
-            --ice-secondary: #6dd5fa;    /* Light Cyan */
+            --ice-primary: #2980b9;      
+            --ice-secondary: #6dd5fa;    
             --ice-bg-start: #1c92d2;
             --ice-bg-end: #f2fcfe;
             --snow-white: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.75); /* Frosted Glass */
+            --glass-bg: rgba(255, 255, 255, 0.75); 
             --glass-border: rgba(255, 255, 255, 0.4);
             --text-dark: #2c3e50;
         }
 
         body {
-            /* Winter Sky Gradient */
+      
             background: linear-gradient(to bottom, var(--ice-bg-start), var(--ice-bg-end));
             font-family: 'Sarabun', sans-serif;
             font-size: 1.2em;
@@ -50,13 +44,13 @@
             background-attachment: fixed;
         }
 
-        /* Frozen Font Styles */
+    
         h1, h2, h3, h4 {
             font-family: 'Kanit', sans-serif;
             font-weight: 600;
         }
 
-        /* --- 2. SNOW ANIMATION --- */
+
         .snowflake {
             color: #fff;
             font-size: 1.2em;
@@ -66,13 +60,12 @@
         }
         @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
 
-        /* --- 3. GLASSMORPHISM (ICE EFFECT) --- */
         .form-log-in-with-email .form-white-background, .well {
             background: var(--glass-bg);
-            backdrop-filter: blur(10px); /* Creates the frosted glass look */
+            backdrop-filter: blur(10px); 
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            border-top: 2px solid rgba(255, 255, 255, 0.9); /* Icy top edge */
+            border-top: 2px solid rgba(255, 255, 255, 0.9); 
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
             border-radius: 15px;
             padding: 40px 20px;
@@ -98,7 +91,7 @@
             margin-bottom: 5px;
         }
 
-        /* Ice Input Fields */
+     
         .form-log-in-with-email input {
             background: rgba(255, 255, 255, 0.9);
             color: #333;
@@ -117,7 +110,6 @@
             outline: none;
         }
 
-        /* Ice Button */
         .form-log-in-with-email button {
             display: block;
             width: 100%;
@@ -139,9 +131,9 @@
             box-shadow: 0 6px 20px rgba(41, 128, 185, 0.4);
         }
 
-        /* --- 4. NAVIGATION --- */
+      
         #navigation-purple {
-            background-color: rgba(44, 62, 80, 0.8); /* Dark semi-transparent */
+            background-color: rgba(44, 62, 80, 0.8); 
             border: none;
             border-bottom: 1px solid rgba(255,255,255,0.2);
             backdrop-filter: blur(5px);
@@ -158,7 +150,6 @@
             background-color: white;
         }
 
-        /* --- 5. HEADINGS & CONTENT --- */
         .text-ice {
             color: white;
             text-shadow: 0 0 10px rgba(109, 213, 250, 0.8), 2px 2px 4px rgba(0,0,0,0.3);
@@ -171,7 +162,6 @@
             font-weight: bold;
         }
 
-        /* Table Ice Style */
         .table-bordered {
             border: 1px solid var(--ice-secondary);
             background-color: rgba(255,255,255,0.8);
@@ -185,9 +175,8 @@
             border-color: #d6eaf8;
         }
 
-        /* --- 6. FOOTER --- */
         .footer-distributed {
-            background-color: #154360; /* Deep Ocean Blue */
+            background-color: #154360; 
             box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
             width: 100%;
             text-align: left;
@@ -212,7 +201,6 @@
             color: #2980b9;
         }
 
-        /* Responsive Fixes */
         @media (max-width: 880px) {
             .footer-distributed .footer-left,
             .footer-distributed .footer-center,
@@ -224,7 +212,7 @@
             }
         }
         
-        /* Utility Colors */
+        
         .text-red-alert { color: #c0392b !important; }
         .text-blue-highlight { color: #2980b9 !important; font-weight: bold; }
     </style>
@@ -637,5 +625,6 @@ Create an account →
         </footer>
     </div>
 </body>
+
 
 </html>
