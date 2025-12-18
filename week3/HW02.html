@@ -1,0 +1,641 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        ยืนยันตัวตนเข้าใช้ระบบเครือข่าย มทร.กรุงเทพ
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!--
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="./bootstrap.min.js"></script>
+<link rel="stylesheet" href="./bootstrap.min.css" >
+<link rel="stylesheet" href="./font-awesome.min.css">
+-->
+
+
+  <style type="text/css">
+        /* --- 1. ICE THEME VARIABLES --- */
+        :root {
+            --ice-primary: #2980b9;      /* Strong Blue */
+            --ice-secondary: #6dd5fa;    /* Light Cyan */
+            --ice-bg-start: #1c92d2;
+            --ice-bg-end: #f2fcfe;
+            --snow-white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.75); /* Frosted Glass */
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --text-dark: #2c3e50;
+        }
+
+        body {
+            /* Winter Sky Gradient */
+            background: linear-gradient(to bottom, var(--ice-bg-start), var(--ice-bg-end));
+            font-family: 'Sarabun', sans-serif;
+            font-size: 1.2em;
+            color: var(--text-dark);
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        /* Frozen Font Styles */
+        h1, h2, h3, h4 {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 600;
+        }
+
+        /* --- 2. SNOW ANIMATION --- */
+        .snowflake {
+            color: #fff;
+            font-size: 1.2em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+            opacity: 0.8;
+        }
+        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+        /* --- 3. GLASSMORPHISM (ICE EFFECT) --- */
+        .form-log-in-with-email .form-white-background, .well {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px); /* Creates the frosted glass look */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-top: 2px solid rgba(255, 255, 255, 0.9); /* Icy top edge */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin-bottom: 32px;
+        }
+
+        .form-login {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-log-in-with-email .form-row {
+            text-align: left;
+            margin-bottom: 23px;
+        }
+
+        .form-log-in-with-email label span {
+            color: var(--ice-primary);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Ice Input Fields */
+        .form-log-in-with-email input {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-sizing: border-box;
+            width: 100%;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+            padding: 12px 18px;
+            border: 2px solid #bce6f5;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .form-log-in-with-email input:focus {
+            border-color: var(--ice-primary);
+            box-shadow: 0 0 10px rgba(41, 128, 185, 0.3);
+            outline: none;
+        }
+
+        /* Ice Button */
+        .form-log-in-with-email button {
+            display: block;
+            width: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 35px;
+            border: none;
+            margin: 30px auto 0;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .form-log-in-with-email button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(41, 128, 185, 0.4);
+        }
+
+        /* --- 4. NAVIGATION --- */
+        #navigation-purple {
+            background-color: rgba(44, 62, 80, 0.8); /* Dark semi-transparent */
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        #navigation-purple .avatar {
+            height: 80px;
+            float: left;
+            margin-top: 19px;
+            filter: drop-shadow(0 0 5px white);
+        }
+        
+        #navigation-purple .navbar-toggle .icon-bar {
+            background-color: white;
+        }
+
+        /* --- 5. HEADINGS & CONTENT --- */
+        .text-ice {
+            color: white;
+            text-shadow: 0 0 10px rgba(109, 213, 250, 0.8), 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .well h4 {
+            color: var(--ice-primary);
+            border-bottom: 2px solid var(--ice-secondary);
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Table Ice Style */
+        .table-bordered {
+            border: 1px solid var(--ice-secondary);
+            background-color: rgba(255,255,255,0.8);
+        }
+        .table > thead > tr > th {
+            background-color: var(--ice-primary);
+            color: white;
+            border-bottom: none;
+        }
+        .table > tbody > tr > td {
+            border-color: #d6eaf8;
+        }
+
+        /* --- 6. FOOTER --- */
+        .footer-distributed {
+            background-color: #154360; /* Deep Ocean Blue */
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 55px 50px;
+            margin-top: 50px;
+            color: white;
+            border-top: 4px solid var(--ice-secondary);
+        }
+
+        .footer-distributed h3 {
+            font-family: 'Kanit', sans-serif;
+            color: var(--ice-secondary);
+        }
+        
+        .footer-distributed .footer-icons a {
+            background-color: #2980b9;
+        }
+        
+        .footer-distributed .footer-icons a:hover {
+            background-color: white;
+            color: #2980b9;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 880px) {
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+        
+        /* Utility Colors */
+        .text-red-alert { color: #c0392b !important; }
+        .text-blue-highlight { color: #2980b9 !important; font-weight: bold; }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+    <nav class="navbar navbar-default" id="navigation-purple">
+        <div class="container">
+            <a href="#">
+                <img class="img-responsive avatar" src="/XX/YY/ZZ/CI/FHEHLG" alt="logo">
+            </a>
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+
+    <div class="col-xs-12 col-sm-12 ">
+        <div class="col-lg-3 col-md-3 col-sm-3" style="margin-top:30px">
+            <div class="main-content">
+
+                <h2>
+                    LOGIN INTERNET
+                </h2>
+                <form class="form-login" method="post" action="/">
+
+                    <div class="form-log-in-with-email">
+
+                        <div class="form-white-background">
+
+                            <input type="hidden" name="4Tredir" value="http://www.msftconnecttest.com/redirect">
+                            <input type="hidden" name="magic" value="257adfd4ca60b62a">
+
+                            <div class="form-row">
+                                <label>
+                                    <span>
+                                        Username
+                                    </span>
+                                    <input name="username" id="ft_un" type="text" placeholder="กรุณากรอก user name"
+                                        autofocus="">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label>
+                                    <span>
+                                        Password
+                                    </span>
+                                    <input name="password" id="ft_pd" type="password" placeholder="กรุณากรอก พาสเวิร์ด">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <button type="submit" id="submit" name="submit">
+                                    Log in
+                                </button>
+                            </div>
+
+                            <a href="https://passwd.rmutk.ac.th/">
+                                หากต้องการเปลี่ยนรหัสผ่านคลิก ที่นี่
+                            </a>
+
+                        </div>
+                        <!--
+<a href="#" class="form-forgotten-password" data-toggle="tooltip" data-placement="top"
+title="หากท่านลืมรหัสผ่านกรุณาส่งคำขอมาที่ email : is@mail.rmutk.ac.th โดยระบุ user ทีท่านต้องการ รีเซ็ตรหัสผ่าน">
+ลืมรหัสผ่าน ·
+</a>
+-->
+
+                        <div class="well">
+                            <span style="color:red">
+                                หากท่านลืมรหัสผ่าน !!
+                            </span>
+                            <br>
+                            สามารถยื่นคำขอเพื่อ Reset รหัสผ่าน โดยโทรมาที่เบอร์มาได้ที่
+                            <span style="color:red">
+                                0 2287 7010
+                            </span>
+                            ·
+                        </div>
+
+                        <!--
+<a href="#" class="form-create-an-account">
+Create an account →
+</a>
+-->
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9" style="margin-top:30px">
+            <h2>
+                ข่าวประกาศ
+            </h2>
+            <!--
+<iframe src="http://www.carit.rmutk.ac.th/expage/feed.php" style="width:100%;height:1000px;background-color:white;">
+</iframe>
+-->
+
+            <div class="well">
+                <ul>
+                    <h4>
+                        การเชื่อมต่อ Wifi โดยไม่ต้องกรอกรหัสผ่านบ่อยครั้ง
+                    </h4>
+                    <li>
+                        เพื่อเป็นการลดปัญหาการกรอกรหัสผ่านบ่อยครั้งในขณะที่ใช้งาน Wifi ภายในมหาวิทยาลัย
+                        ทางสำนักวิทยบริการและเทคโนโลยีสารสนเทศ
+                        ขอให้ท่านที่ต้องการใช้งาน Wifi เชื่อมต่อ Access Point ชื่อ
+                        <font color="#FF3300">
+                            <b>
+                                RMUTK-Mobile
+                            </b>
+                        </font>
+                        <u>
+                            เฉพาะเครื่องที่ท่านแน่ใจว่าท่านใช้งานแต่เพียงผู้เดียว
+                        </u>
+                        เพราะระบบจะจำชื่อที่ท่าน Login ครั้งแรกเอาไว้เสมอ
+
+                        <br>
+                        <u>
+                            <font color="#0066FF">
+                                ข้อดี
+                            </font>
+                        </u>
+                        คือหลังจากท่านเชื่อมต่อในครั้งแรกแล้วครั้งต่อไปเครื่องของท่านจะเชื่อมต่อระบบ Wifi
+                        ของมหาวิทยาลัยโดยอัตโนมัติ โดยไม่ต้องกรอกรหัสอีกรอบ
+                        <font color="#CC3300">
+                            <u>
+                                ทั้งนี้ Access Point เดิมที่ชื่อ RMUTKWiFi และ RMUTKWiFi_1 ยังคงใช้งานได้ปกติ
+                            </u>
+                        </font>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="well">
+                <h4>
+                    บทลงโทษสำหรับผู้กระทำผิด พรบ ว่าด้วยการกระทำผิดเกี่ยวกับคอมพิวเตอร์ พ.ศ. 2550
+                </h4>
+                <table class="table table-bordered table-responsive">
+                    <thead>
+                        <tr class="info">
+                            <th>
+                                ฐานความผิด
+                            </th>
+                            <th>
+                                โทษจำคุก
+                            </th>
+                            <th>
+                                โทษปรับ
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                มาตรา 5 การเข้าถึงระบบคอมพิวเตอร์โดยมิชอบ
+                            </td>
+                            <td>
+                                ไม่เกิน 6 เดือน
+                            </td>
+                            <td>
+                                ไม่เกิน 10,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 6
+                                การเปิดเผยมาตรการป้องกันการเข้าถึงระบบคอมพิวเตอร์ที่ผู้อื่นจัดทำขึ้นเป็นการเฉพาะโดยไม่ชอบ
+                            </td>
+                            <td>
+                                ไม่เกิน 1 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 20,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 7 การเข้าถึงข้อมูลคอมพิวเตอร์โดยไม่ชอบ
+                            </td>
+                            <td>
+                                ไม่เกิน 2 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 40,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 8 การดักรับข้อมูลคอมพิวเตอร์ของผู้อื่นโดยไม่ชอบ
+                            </td>
+                            <td>
+                                ไม่เกิน 3 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 60,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 9 การทำให้เสียหาย ทำลาย แก้ไข เปลี่ยนแปลงเพิ่มเติมข้อมูลคอมพิวเตอร์โดยไม่ชอบ
+                            </td>
+                            <td>
+                                ไม่เกิน 5 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 100,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 10 การกระทำเพื่อให้การทำงานของระบบคอมพิวเตอร์ของผู้อื่นไม่สามารถทำงานได้ตามปกติ
+                            </td>
+                            <td>
+                                ไม่เกิน 5 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 100,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 11 การส่งข้อมูลคอมพิวเตอร์รบกวนการใช้ระบบคอมพิวเตอร์ของคนอื่นโดยปกติสุข (Spam
+                                Mail)
+                            </td>
+                            <td>
+                                ไม่มี
+                            </td>
+                            <td>
+                                ไม่เกิน 100,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 12 การจำหน่ายชุดคำสั่งที่จัดทำขึ้นเพื่อนำไปใช้เป็นเครื่องมือในการกระทำผิด
+                            </td>
+                            <td>
+                                ไม่เกิน 1 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 20,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 13 การกระทำผิดต่อความมั่นคง
+                                <li>
+                                    ก่อความเสียหายแก่ข้อมูลคอมพิวเตอร์ฺ
+                                </li>
+                                <li>
+                                    กระทบต่อความมั่นคงความปลอดภัยของประเทศ / เศรษฐกิจ
+                                </li>
+                                <li>
+                                    เป็นเหตุให้ผู้อื่นถึงแก่ชีวิต
+                                </li>
+                            </td>
+                            <td>
+                                <br>
+                                <li>
+                                    ไม่เกิน 10 ปี
+                                </li>
+                                <li>
+                                    3 ปี - 15 ปี
+                                </li>
+                                <li>
+                                    10 ปี - 20 ปี
+                                </li>
+                            </td>
+                            <td>
+                                ไม่เกิน 200,000 บาท และ 60,000 - 300,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 14 การใช้ระบบคอมพิวเตอร์ทำความผิดอื่น (เผยแพร่ เนื้อหาอันไม่เหมาะสม)
+                            </td>
+                            <td>
+                                ไม่เกิน 5 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 100,000 บาท
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 15 ผู้ให้บริการจงใจสนับสนุนหรือยินยอมให้มีการกระทำความผิด
+                            </td>
+                            <td>
+                                ต้องระวางโทษเช่นเดียวกับผู้กระทำความผิด
+                            </td>
+                            <td>
+                                ต้องระวางโทษเช่นเดียวกับผู้กระทำความผิด
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                มาตรา 16 การตกแต่งข้อมูลคอมพิวเตอร์ที่เป็นภาพของบุคคล
+                            </td>
+                            <td>
+                                ไม่เกิน 3 ปี
+                            </td>
+                            <td>
+                                ไม่เกิน 60,000 บาท
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div style="clear:both;">
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3>
+                    UTK
+                    <span>
+                        Carit
+                    </span>
+                </h3>
+
+                <p class="footer-links">
+                    <a href="http://www.carit.rmutk.ac.th/index.php">
+                        Carit Site
+                    </a>
+                    ,
+                    <a href="http://is.rmutk.ac.th">
+                        IT Site
+                    </a>
+
+
+                </p>
+
+                <p class="footer-company-name">
+                    มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ © 2016
+                </p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker">
+                    </i>
+                    <p>
+                        <span>
+                            มทร.กรุงเทพ
+                            เลขที่ 2 ถนนนางลิ้นจี่ ทุ่งมหาเมฆ สาทร
+                        </span>
+                        กรุงเทพฯ 10120
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone">
+                    </i>
+                    <p>
+                        +66 0 2287 7010
+                    </p>
+                </div>
+
+                <!--
+<div>
+<i class="fa fa-envelope">
+</i>
+
+-->
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
