@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Project Overview</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, #cce7ff, #eaf6ff, #ffffff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #033e6b;
+            overflow: hidden;
+        }
+
+        h1 {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 80, 150, 0.25);
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: linear-gradient(145deg, #e6f4ff, #cde9ff);
+            border: 1px solid #b8dcff;
+            padding: 12px 20px;
+            margin: 8px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #033e6b;
+            box-shadow: 0 6px 15px rgba(0, 80, 150, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(6, 134, 247, 0.4);
+            background: linear-gradient(145deg, #ffffff, #dff1ff);
+        }
+
+        #result {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 80, 150, 0.2);
+        }
+
+        /* ❄️ Snow */
+        .snow {
+            position: fixed;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            box-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="greeting">สวัสดีคุณ</h1>
+
+    <div>
+        <button onclick="showUserInfo()">แสดงข้อมูลผู้ใช้</button>
+        <button onclick="reloadPage()">รีเฟรชหน้า</button>
+        <button onclick="openNewPage()">เปิดหน้าต่างใหม่</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        const userName = window.prompt("กรุณาใส่ชื่อของคุณ:");
+        if (userName) {
+            document.getElementById("greeting").innerText = `สวัสดีคุณ ${userName}`;
+        }
+
+        function showUserInfo() {
+            document.getElementById("result").innerHTML = `
+                <p>Agent: ${navigator.userAgent}</p>
+                <p>Language: ${navigator.language}</p>
+                <p>Width: ${screen.width}</p>
+                <p>Height: ${screen.height}</p>
+            `;
+        }
+
+        function reloadPage() {
+            window.location.reload();
+        }
+
+        function openNewPage() {
+            window.open("https://www.google.com");
+
+            for (let i = 0; i < 30; i++) {
+                const snow = document.createElement("div");
+                snow.className = "snow";
+                snow.style.left = Math.random() * 100 + "vw";
+                snow.style.animationDuration = 3 + Math.random() * 5 + "s";
+                snow.style.opacity = Math.random();
+                snow.style.transform = `scale(${Math.random()})`;
+                document.body.appendChild(snow);
+            }
+        }
+    </script>
+
+</body>
+</html>
