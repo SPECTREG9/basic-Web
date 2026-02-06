@@ -12,8 +12,15 @@ function HomePage() {
       <a href="/form">บทเรียนที่3 State ...</a>
      <br />
       <a href="/showhide">บทเรียนที4 State showhide</a>
+      <br />
+      <a href="/jikan">บทเรียนที่5 ดึงข้อมูลจาก API jikan</a> 
+      <br />
+      <a href="/News">บทเรียนที่6 ดึงข้อมูลจาก API News</a>
+      <br />
+      <a href="/cheapshark">บทเรียนที่7 ดึงข้อมูลจาก API Cheapshark</a>
     </div>
-  </div>
+    </div>
+  
   );
 }
 
